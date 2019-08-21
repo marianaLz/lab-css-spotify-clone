@@ -1,150 +1,142 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-header{
-  background-color: #FFF;
-  height: 90px;
+nav {
+  background-color: white;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
 }
 
-header nav{
-  height: 100%;
-}
-
-header nav ul.menu-container {
-  font-size: 18px;
-  float: right;
-  list-style-type: none;
-  height: 100%;
-  width: 35%
-}
-
-header nav ul.menu-container > li{
-  text-decoration: none;
-  float: left;
-  padding: 7.5% 3%;
-  color: black;
-}
-
-header nav ul.menu-container > li:hover{
-  color: white;
-  background-color: rgba(0, 0, 0, .6);
-  transition: all .3s;
-}
-
-header  > nav > img {
-  margin: 1.5% 3%;
+nav > img {
   width: 200px;
-  float: left;
   animation: spotify 5s infinite;
 }
 
-@keyframes spotify{
-  0%{
-      transform: scale(0.8)
-  }
+nav ul.menu-container {
+  font-size: 18px;
+  list-style-type: none;
+  width: 27%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul.menu-container > li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+}
 
-  50%{
-      transform: scale(1.2)
-  }
+nav ul.menu-container > li:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s;
+}
 
-  100%{
-      transform: scale(0.8)
+@keyframes spotify {
+  0% {
+    transform: scale(0.75);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0.75);
   }
 }
 
-header  > nav > img:hover{
-  animation: 2s infinite;
-}
-
-section.landing{
-  background-image: url("C:/Users/SAMSUNG/Documents/Mariana/IH/lab-css-spotify-clone/starter-code/images/landing.jpg");
+section.landing {
+  background-image: url("../images/landing.jpg");
   height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
 section.landing > h1 {
-  padding-top: 160px;
-  color: #FFF;
-  text-align: center;
   font-size: 70px;
 }
 
 section.landing > p {
-  color: #FFF;
+  margin-top: 20px;
   text-align: center;
   font-size: 25px;
 }
-section > h2.whats {
-  position: absolute;
-  padding-top: 30px;
-  padding-bottom: 5px;
-  margin-left: 465px;
-  text-align: center;
+
+h2.whats {
+  margin: 50px;
   font-size: 30px;
-  border-bottom: 4px solid #00B172;
+  border-bottom: 4px solid #00b172;
 }
 
-section > article {
-  float: left;
-  padding-top: 12%;
-  padding-left: 11%;
-  text-align: center;
+div.white {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-section > article > h3 > img {
-  width: 125px;
-}
-
-section > article > h3.items {
-  color: #00B172;
-  font-size: 25px;
-}
-
-section > article > p {
+section.three {
+  display: flex;
+  justify-content: space-around;
   font-size: 20px;
+  text-align: center;
+  width: 80vw;
+}
+
+div.items > img {
+  width: 8vw;
+}
+
+div.items {
+  color: #00b172;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 20vh;
 }
 
 section.green {
-background-color: #00B172;
-color:#FFF;
-margin: 35px;
-}
-
-section > h2.kanye {
-  color: #FFF;
-  position: absolute;
   padding-top: 50px;
-  padding-bottom: 5px;
-  margin-left: 75px;
-  font-size: 30px;
-  border-bottom: 3px solid #FFF;
+  padding-left: 100px;
+  margin: 30px;
+  background-color: #00b172;
+  color: #fff;
+  width: 85vw;
+  height: 75vh;
 }
 
-section > div.letras {
-  font-size: 22px;
-  margin-top: 450px;
-  margin-left: 50px;
-  padding-top: 150px;
-  padding-left: 25px;
-  padding-bottom: 80px;
-}
-  
-section > img.icon {
-  position: absolute;
-  width: 125px;
-  padding: 275px 20px 150px 550px
+.columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
 }
 
-section > img.app {
-  position: absolute;
-  width: 300px;
-  padding: 75px 20px 50px 780px
+span.kanye {
+  color: #fff;
+  font-size: 35px;
+  border-bottom: 3px solid #fff;
+}
+
+div.letras {
+  font-size: 20px;
 }
